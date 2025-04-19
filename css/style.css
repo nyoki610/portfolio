@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/* Common Parts */
+
+html {
+    font-size: 100%;
+}
+body {
+    background-color: #ddd;
+    padding: 0;
+}
+section {
+    margin: 40px auto;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 14px;
+}
+p {
+    font-size: 10px;
+}
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: #000;
+}
+img {
+    max-width: 100%;
+}
+.wrapper {
+    padding: 0 1.5rem;
+}
+
+/* background-color */
+.background-white {
+    background-color: #fff;
+}
+
+/* rounded-image */
+.rounded-image {
+    border-radius: 50%;
+}
+
+/* layout */
+.align-center {
+    text-align: center;
+}
+
+/* header */
+header {
+    padding: 30px 0;
+}
+/* profile */
+.profile {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile img {
+    width: 80px;
+    height: 80px;
+}
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* sns-links */
+.sns-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.sns-links a {
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    min-width: 80px;
+    box-shadow: 0 2px 4px #ddd;
+}
+.sns-links a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px #ddd;
+}
+.github-mark, .qiita-mark, .x-logo {
+    width: 14px;
+    height: 14px;
+}
+.github-logo, .qiita-logo {
+    height: 14px;
+    width: auto;
+}
+
+/* experience */
+.experience-content {
+    padding: 10px;
+}
+.experience-content-main {
+    display: flex;
+    gap: 10px;
+    align-items: top;
+    justify-content: left;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+.experience img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+}
+.experience-content-year {
+    margin-left: 10px;
+}
+.experience table {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 480px;
+}
+.experience table td {
+    border-bottom: 2px solid #ddd;
+    padding: 4px 0;
+}
+.experience table tr:last-child td {
+    border-bottom: none;
+}
+
+/* skills */
+.skill-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.skill-content-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 60px;
+}
+.skill-content-item img {
+    width: 40px;
+    height: 40px;
+}
+.skill-content-item p {
+    font-size: 10px;
+}
+
+/* projects */
+.project-item {
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 480px;
+    margin: 20px auto;
+}
+.project-item-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.project-item-tags span {
+    border: 1px solid #000;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 500;
+} 
+.project-item-image {
+    width: 100%;
+    margin-top: 10px;
+}
+.project-item h4 {
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+.install-navigation {
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+.install-navigation a {
+    display: block;
+    height: 32px;
+}
+
+
+.qiita-card {
+    /* overlayのabsoluteと対応 */
+    position: relative;
+    width: 100%;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+.qiita-content h5 {
+    margin-bottom: 4px;
+}
+
+
+/* オーバーレイ効果 */
+.qiita-card .overlay {
+    /* qiita-cardのrelativeと対応 */
+    position: absolute;
+
+    /* オーバーレイの大きさをqiita-cardに合わせる */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+
+    /* ホバー時に表示 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.view-text {
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+/* Qiitaタグ */
+.qiita-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.qiita-tags span {
+    background: #ddd;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 500;
+} 
+
+/* ホバーエフェクト */
+.qiita-card:hover .overlay {
+    opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+    padding: 8px 0;
+}
