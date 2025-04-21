@@ -8,6 +8,7 @@ html {
 body {
     background-color: #ddd;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 section {
     margin: 40px auto;
