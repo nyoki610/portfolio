@@ -6,7 +6,7 @@ html {
     font-size: 100%;
 }
 body {
-    background-color: #ddd;
+    background-color: #dcdcdc;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -212,7 +212,7 @@ header {
 
 
 /* オーバーレイ効果 */
-.qiita-card .overlay {
+.qiita-card .overlay, .qiita-card .overlay_2 {
     /* qiita-cardのrelativeと対応 */
     position: absolute;
 
@@ -228,11 +228,18 @@ header {
 
     background: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+}
 
+.qiita-card .overlay {
     /* ホバー時に表示 */
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
+.qiita-card .overlay_2 {
+    opacity: 1;
+}
+
 
 .view-text {
     color: white;
